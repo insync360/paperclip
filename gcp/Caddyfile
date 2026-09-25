@@ -1,0 +1,5 @@
+{$PAPERCLIP_DOMAIN} {
+	encode zstd gzip
+	# WebSocket upgrades (live updates, remote runners) are proxied automatically.
+	reverse_proxy paperclip:3100
+}
